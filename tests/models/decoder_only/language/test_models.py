@@ -58,7 +58,8 @@ from ...utils import check_logprobs_close
         pytest.param(
             "ehristoforu/Falcon3-MoE-2x7B-Insruct",  # mixtral
             marks=[pytest.mark.cpu_model],
-        )
+        ),
+        pytest.param("Saesara/swissai"),  # swissai
     ])
 @pytest.mark.parametrize("dtype", ["half"])
 @pytest.mark.parametrize("max_tokens", [32])
